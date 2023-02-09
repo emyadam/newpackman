@@ -11,21 +11,21 @@ public class LauncherProductProduct {
 	* @return   A new factory using the sprites from   {@link #getSpriteStore()}  and the ghosts from   {@link #getGhostFactory()}  .
 	*/
 	public LevelFactory getLevelFactory() {
-		return new LevelFactory(LauncherProduct.SPRITE_STORE, getGhostFactory());
+		return new LevelFactory(LauncherProductS.SPRITE_STORE, getGhostFactory());
 	}
 
 	/**
 	* @return   A new factory using the sprites from   {@link #getSpriteStore()}  .
 	*/
 	public GhostFactory getGhostFactory() {
-		return new GhostFactory(LauncherProduct.SPRITE_STORE);
+		return new GhostFactory(LauncherProductS.SPRITE_STORE);
 	}
 
 	/**
 	* @return   A new board factory using the sprite store from  {@link #getSpriteStore()}  .
 	*/
 	public BoardFactory getBoardFactory() {
-		return new BoardFactory(LauncherProduct.SPRITE_STORE);
+		return new BoardFactory(LauncherProductS.SPRITE_STORE);
 	}
 
 	/**

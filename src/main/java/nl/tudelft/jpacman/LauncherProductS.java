@@ -11,7 +11,7 @@ import nl.tudelft.jpacman.game.GameFactory;
 import nl.tudelft.jpacman.level.Level;
 import java.io.IOException;
 
-public class LauncherProduct {
+public class LauncherProductS {
 	private LauncherProductProduct launcherProductProduct = new LauncherProductProduct();
 	public static final PacManSprites SPRITE_STORE = new PacManSprites();
 	private String levelMap = Launcher.DEFAULT_MAP;
