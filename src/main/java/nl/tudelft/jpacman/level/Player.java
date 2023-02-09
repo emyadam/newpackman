@@ -66,14 +66,18 @@ public class Player extends Unit {
      *            <code>true</code> iff this player is alive.
      */
     public void setAlive(boolean isAlive) {
-        if (isAlive) {
-            deathSprite.setAnimating(false);
-        }
-        if (!isAlive) {
-            deathSprite.restart();
-        }
-        this.alive = isAlive;
+        deathSprite(isAlive);
+		this.alive = isAlive;
     }
+
+	private void deathSprite(boolean isAlive) {
+		if (isAlive) {
+			deathSprite.setAnimating(false);
+		}
+		if (!isAlive) {
+			deathSprite.restart();
+		}
+	}
 
     /**
      * Returns the amount of points accumulated by this player.
