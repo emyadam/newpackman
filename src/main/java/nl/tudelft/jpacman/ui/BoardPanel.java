@@ -89,32 +89,8 @@ class BoardPanel extends JPanel {
                 int cellX = x * cellW;
                 int cellY = y * cellH;
                 Square square = board.squareAt(x, y);
-                render(square, graphics, cellX, cellY, cellW, cellH);
+                square.render(graphics, cellX, cellY, cellW, cellH);
             }
-        }
-    }
-
-    /**
-     * Renders a single square on the given graphics context on the specified
-     * rectangle.
-     *
-     * @param square
-     *            The square to render.
-     * @param graphics
-     *            The graphics context to draw on.
-     * @param x
-     *            The x position to start drawing.
-     * @param y
-     *            The y position to start drawing.
-     * @param width
-     *            The width of this square (in pixels.)
-     * @param height
-     *            The height of this square (in pixels.)
-     */
-    private void render(Square square, Graphics graphics, int x, int y, int width, int height) {
-        square.getSprite().draw(graphics, x, y, width, height);
-        for (Unit unit : square.getOccupants()) {
-            unit.getSprite().draw(graphics, x, y, width, height);
         }
     }
 }
